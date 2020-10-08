@@ -40,7 +40,7 @@ class App extends React.Component {
                     </thead>
                     <tbody>
                         {this.state.employeeList.map(employee => (
-                            <tr>
+                            <tr key={employee.id}>
                                 <th scope="row">{employee.id}</th>
                                 <td>{employee.name}</td>
                                 <td>{employee.title}</td>
