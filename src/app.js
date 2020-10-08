@@ -3,9 +3,29 @@ import employees from "./employees.json"
 
 class App extends React.Component {
     state = {
-        employeeList: employees
+        employeeList: employees,
+        sortOrder: ""
     }
-    
+    handleSort = () => {
+        console.log("test")
+        let newSort
+        if (this.state.sortOrder !== "des") {
+            newSort = this.state.employeeList.sort((a, b) => {
+                return a.name - b.name;
+            }
+            );
+        }
+        else {
+            newSort = this.state.employeeList.sort((a, b) => {
+                return b.name - a.name;
+            }
+            );
+        }
+        console.log(newSort)
+        const newSortOrder = this.state.sortOrder === "des"? "asc":"des"
+        this.setState({ employeeList: newSort, sortOrder:newSortOrder })
+    }
+
     render() {
         return (
             <>
@@ -19,16 +39,16 @@ class App extends React.Component {
                         </tr>
                     </thead>
                     <tbody>
-                    {this.state.employeeList.map(employee=>(
-                        <tr>
-                            <th scope="row">{employee.id}</th>
-                            <td>{employee.name}</td>
-                            <td>{employee.title}</td>
-                            <td>{employee.email}</td>
-                        </tr>
+                        {this.state.employeeList.map(employee => (
+                            <tr>
+                                <th scope="row">{employee.id}</th>
+                                <td>{employee.name}</td>
+                                <td>{employee.title}</td>
+                                <td>{employee.email}</td>
+                            </tr>
 
-                    ))}
-                        
+                        ))}
+
                     </tbody>
                 </table>
 
@@ -37,3 +57,5 @@ class App extends React.Component {
         );
     }
 }
+
+export default App
