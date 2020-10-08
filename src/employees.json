@@ -1,0 +1,38 @@
+[
+
+    {
+        "id":1,
+        "name": "Gandalf the Grey",
+        "title": "CEO",
+        "email": "undyingwizard@middleearth.com"
+    },
+
+    {
+        "id":2,
+        "name": "Frodo Baggins",
+        "title": "Transportation Manager",
+        "email": "invisiblemenace@middleearth.com"
+    },
+
+    {
+        "id":3,
+        "name": "Samwise Gamgee",
+        "title": "CFO",
+        "email": "samwisethebrave@middleearth.com"
+    },
+
+    {
+        "id":4,
+        "name": "Aragorn of Gondor",
+        "title": "Head of Protective Services",
+        "email": "youhavemysword@middleearth.com"
+    },
+
+    {
+        "id":5,
+        "name": "Legolas of Mirkwood",
+        "title": "CTO",
+        "email":"theyretakingthehobbitstoisengard@middleearth.com"
+    }
+
+]
